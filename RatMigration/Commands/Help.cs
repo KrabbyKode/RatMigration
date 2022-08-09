@@ -14,14 +14,22 @@ namespace RatMigration.Commands
 
         public override String execute(String[] args)
         {
-            return "";
-            Console.WriteLine("Available Commands");
-            Console.WriteLine("==================");
-            Console.WriteLine("Help- displays commands");
-            Console.WriteLine("Credits- Displays credits");
+            return "Help section is being fixed";
+
 
 
         }
 
     }
 }
+/*
+ *          Console.WriteLine("Available Commands");
+            Console.WriteLine("==================");
+            Console.WriteLine("Help- displays commands");
+            Console.WriteLine("Credits- Displays credits");
+            Console.WriteLine("file- filesystem. It has several arguments:");
+            Console.WriteLine("    create- creates file");
+            Console.WriteLine("    erase- deletes file");
+            Console.WriteLine("    createdir- creates folder/directory");
+            Console.WriteLine("    ereasedir- erases folder/directory");
+*/
