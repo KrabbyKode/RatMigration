@@ -13,13 +13,15 @@ namespace RatMigration.Commands {
         
         public CommandManager()
         {
-            this.commands = new List<Command>(5);// the "1" is how many commands will be in our list. We have one so far
+            this.commands = new List<Command>(7);// the "1" is how many commands will be in our list. We have one so far
             //register commands here
             this.commands.Add(new Help("help")); //"help" is the command name
             this.commands.Add(new Credits("credits"));
             this.commands.Add(new time("time"));
             this.commands.Add(new File("file"));
             this.commands.Add(new clear("clear"));
+            this.commands.Add(new shutdown("shutdown"));
+            this.commands.Add(new restart("restart"));
         }
 
         public String processInput (String input)//take the inupt from the user, and processes command. String input would be something like "taskkill -f -im chrome.exe"
