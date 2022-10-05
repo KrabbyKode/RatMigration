@@ -24,7 +24,7 @@ namespace RatMigration.RatShell
 					return ReturnCode.Success;
 				}
 			}
-			Return = "Command not found!";
+			Return = $"Command '{Name}' not found!";
 			return ReturnCode.CommandNotFound;
 		}
 		public static string Invoke(string Name, string[] Args)
@@ -34,14 +34,13 @@ namespace RatMigration.RatShell
 		}
 		public static string Invoke(string[] Args)
 		{
-			string Name = Args[0];
 			string[] NewArgs = new string[Args.Length - 1];
 			for (int I = 0; I < NewArgs.Length; I++)
 			{
 				NewArgs[I] = Args[I + 1];
 			}
 
-			TryInvoke(Name, NewArgs, out string Return);
+			TryInvoke(Args[0], NewArgs, out string Return);
 			return Return;
 		}
 		public static void Initialize()

