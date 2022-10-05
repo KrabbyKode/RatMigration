@@ -47,6 +47,12 @@ namespace RatMigration.RatShell
 		{
 			// Create all command objects.
 			_ = new Commands.Clear();
+			_ = new Commands.Credits();
+			_ = new Commands.File();
+			_ = new Commands.Help();
+			_ = new Commands.Info();
+			_ = new Commands.Reboot();
+			_ = new Commands.Shutdown();
 
 			// Log for debugging
 			Console.ForegroundColor = ConsoleColor.Green;
