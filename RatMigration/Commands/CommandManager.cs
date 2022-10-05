@@ -13,7 +13,7 @@ namespace RatMigration.Commands {
         
         public CommandManager()
         {
-            this.commands = new List<Command>(7);// the "1" is how many commands will be in our list. We have one so far
+            this.commands = new List<Command>(8);// the "1" is how many commands will be in our list. We have one so far
             //register commands here
             this.commands.Add(new Help("help")); //"help" is the command name
             this.commands.Add(new Credits("credits"));
@@ -22,12 +22,13 @@ namespace RatMigration.Commands {
             this.commands.Add(new clear("clear"));
             this.commands.Add(new shutdown("shutdown"));
             this.commands.Add(new restart("restart"));
+            this.commands.Add(new sysinfo("sysinfo"));
         }
 
         public String processInput (String input)//take the inupt from the user, and processes command. String input would be something like "taskkill -f -im chrome.exe"
         {
             String[] split = input.Split(' '); //its called "split" because there will be a space between the command and arguments
-            String label=split[0]; // strings count up from zero. So what we are doing here is checking thr first string (taskkil). label == taskkill label is defined here
+            String label=split[0]; // strings count up from zero. So what we are doing here is checking thr first string (taskkil). label == taskkill. label is defined here
 
             List<String> args=new List<String>();
 

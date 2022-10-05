@@ -14,7 +14,8 @@ namespace RatMigration.Commands
 
         public override String execute(String[] args)
         {
-            return "Help section is being fixed";
+            return "https://github.com/KrabbyKode/RatMigration/wiki";
+            return "view ReadMe.txt in the Rat OS Installation folder.";
 
 
 

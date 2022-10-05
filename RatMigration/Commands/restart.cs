@@ -13,8 +13,18 @@ namespace RatMigration.Commands
 
         public override String execute(String[] args)
         {
-            Sys.Power.Reboot();
-            return "Rebooting";
+            Console.WriteLine("Would you like to restart Rat OS? Yes/No");
+            string ans = Console.ReadLine();
+            if (ans.ToLower() == "y" || ans.ToLower() == "yes" || ans.ToLower() == "Yes")
+            {
+                Sys.Power.Reboot();
+            }
+            else
+            {
+                Console.Clear();
+                return "Restart Aborted";
+            }
+            return "";
         }
     }
 }

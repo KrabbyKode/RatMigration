@@ -14,7 +14,7 @@ namespace RatMigration.Commands
 
         public override String execute(String[] args)
         {
-            DateTime.Now.ToString("hh:mm:ss tt"); //could be replaced with Cosmos.HAL.RTC
+            DateTime.Now.ToString("hh: mm:ss tt"); //could be replaced with Cosmos.HAL.RTC
             Console.WriteLine(DateTime.Now);
             return "";
 
@@ -22,3 +22,4 @@ namespace RatMigration.Commands
 
     }
 }
+//Make a switch to be able to turn time setting from Advanced (hh:mm:ss tt) to Simple (hh:mm)

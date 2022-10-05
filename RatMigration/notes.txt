@@ -1,3 +1,69 @@
 ﻿Credits:
 xyve#5469
 Tech Media
+
+private static int screenX = 800;
+private static int screenY = 640;  <- lets see if we can use screenX&Y to print out in the sysinfo command
+
+Next Task: 
+record the users last input, and when the [UP] arrowkey is pressed, the input is put in the Writeline
+Copy & Paste
+Text highlighting
+
+
+        public string user = "user";
+        public string hostname = "Rat OS";
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.White;
+
+Color Blocks
+Console.ForegroundColor = ConsoleColor.Black;
+Console.Write("[]");
+
+uint maxmem = Cosmos.Core.CPU.GetAmountOfRAM();
+ulong availableMem = Cosmos.Core.GCImplementation.GetAvailableRAM();
+ulong usedmem = maxmem - availableMem;
+
+Add labels of "FILE" and "FOLDER" next to the file/folder
+
+
+Color split text
+Console.ForegroundColor = ConsoleColor.Green;
+Console.Write("Green");
+Console.ForegroundColor = ConsoleColor.Gray;
+Console.Write("@");
+Console.ForegroundColor = ConsoleColor.Blue;
+Console.Write("Blue");
+Console.ForegroundColor = ConsoleColor.White;
+
+Console.Write("\n");
+
+            
+            uint maxmem = Cosmos.Core.CPU.GetAmountOfRAM();
+            ulong availableMem = Cosmos.Core.GCImplementation.GetAvailableRAM();
+            ulong usedmem = availableMem - maxmem;
+
+            Console.WriteLine("User: " + user);
+            Console.WriteLine("Host: " + hostname);
+            Console.WriteLine("CPU: Not Finished");
+            Console.WriteLine("Screensize (Columns and Rows): " + screenX + " x " + screenY);
+            Console.WriteLine("Memory Used: " + usedmem + "/" + maxmem );
+            Console.WriteLine("Memory Available: " + availableMem);
+
+String response = "";
+case "user":
+                    try
+                    {
+                        Console.WriteLine(user);
+                    }
+                    catch (Exception ex)
+                    {
+                        response = ex.ToString();
+                    }
+                    break;
+
+                default:
+                    response = "Unexpected argument: " + args[0];
+                    break;
+
+                    return response;
