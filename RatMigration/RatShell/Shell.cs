@@ -17,13 +17,14 @@ namespace RatMigration.RatShell
 
 			for (int I = 0; I < Commands.Count; I++)
 			{
-				if (Commands[I].Name == Name)
+				// Use .ToLower to normalize strings.
+				if (Commands[I].Name.ToLower() == Name.ToLower())
 				{
 					Return = Commands[I].Invoke(Args);
 					return ReturnCode.Success;
 				}
 			}
-			Return = string.Empty;
+			Return = "Command not found!";
 			return ReturnCode.CommandNotFound;
 		}
 		public static string Invoke(string Name, string[] Args)
