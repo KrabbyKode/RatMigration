@@ -89,6 +89,7 @@ namespace RatMigration.RatShell.Commands
 						foreach (string S in Directory.GetFiles(Args[1]))
 						{
 							Response += $"\n{S}";
+
 						}
 						break;
 

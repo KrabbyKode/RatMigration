@@ -13,7 +13,7 @@ namespace RatMigration.RatShell.Commands
 		int screenX = 800;
 		int screenY = 640;
 		public string user = "user";
-		public string hostname = "rat_os";
+		public string hostName = "rat_os";
 		public string version = "v 0.2.10";
 
 		public override string Invoke(string[] Args)
@@ -31,7 +31,7 @@ namespace RatMigration.RatShell.Commands
 						break;
 
 					case "mem":
-						Response += "Memory Used: " + usedmem + "/" + maxmem;
+						Response += "Memory Used: " + ((usedmem / 1024) / 1024) + "/" + maxmem;//must fix this lol
 						Response += "\nMemory Available: " + availableMem;
 						break;
 
@@ -44,7 +44,7 @@ namespace RatMigration.RatShell.Commands
 						break;
 
 					case "host":
-						Response += hostname;
+						Response += hostName;
 						break;
 
 					default:

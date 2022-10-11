@@ -1,5 +1,4 @@
-﻿//Big thanks to Tech Media
-using System;
+﻿using System;
 using Sys = Cosmos.System;
 using Cosmos.System.FileSystem.VFS;
 using Cosmos.System.FileSystem;
@@ -10,7 +9,7 @@ namespace RatMigration
 	public class Kernel : Sys.Kernel
 	{
 		public string user = "user";
-		public string hostname = "rat_os";
+		public string hostName = "rat_os";
 
 		protected override void BeforeRun()
 		{
@@ -26,8 +25,9 @@ namespace RatMigration
 		protected override void Run()
 		{
 			Console.Write("> ");
-			string repsonse = Shell.Invoke(Console.ReadLine().Split(' '));
+			string repsonse = Shell.Invoke(Console.ReadLine().Split(' '));//ads a space after >
 			Console.WriteLine(repsonse); // writes the responce to the users command
-		}
-	}
+
+        }
+    }
 }

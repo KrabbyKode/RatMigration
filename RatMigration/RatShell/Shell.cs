@@ -53,9 +53,10 @@ namespace RatMigration.RatShell
 			_ = new Commands.Info();
 			_ = new Commands.Reboot();
 			_ = new Commands.Shutdown();
+            _ = new Commands.Time();
 
-			// Log for debugging
-			Console.ForegroundColor = ConsoleColor.Green;
+            // Log for debugging
+            Console.ForegroundColor = ConsoleColor.Green;
 			Console.Write("[ OK ] ");
 			Console.ResetColor();
 			Console.WriteLine("Initialized RatShell successfully.");

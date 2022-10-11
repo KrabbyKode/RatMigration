@@ -10,7 +10,7 @@
 
 		public override string Invoke(string[] Args)
 		{
-			return "xyve#5469 & Tech Media";
+			return "Terminal.cs#4512, xyve#5469, Kernel#0365, and Tech Media";
 		}
 	}
 }
