@@ -67,3 +67,7 @@ case "user":
                     break;
 
                     return response;
+
+default:
+	Response += "Unexpected argument: " + Args[0];
+	break;

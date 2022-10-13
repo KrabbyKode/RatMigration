@@ -43,7 +43,7 @@ namespace RatMigration.RatShell
 			TryInvoke(Args[0], NewArgs, out string Return);
 			return Return;
 		}
-		public static void Initialize()
+		public static void Initialize() //TODO (or not): Perhaps post some more info?
 		{
 			// Create all command objects.
 			_ = new Commands.Clear();
@@ -54,6 +54,7 @@ namespace RatMigration.RatShell
 			_ = new Commands.Reboot();
 			_ = new Commands.Shutdown();
             _ = new Commands.Time();
+            _ = new Commands.Network();
 
             // Log for debugging
             Console.ForegroundColor = ConsoleColor.Green;
