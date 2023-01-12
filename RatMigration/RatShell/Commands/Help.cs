@@ -11,9 +11,9 @@
 		public override string Invoke(string[] Args)
 		{
 			string Response =
-				"\n==============================" +
-				"\nList of all available commands" +
-				"\n==============================";
+				"\n===============================" +
+				"\nList of all available commands:" +
+				"\n===============================";
 			for (int I = 0; I < Shell.Commands.Count; I++)
 			{
 				Response += '\n' + Shell.Commands[I].Name;

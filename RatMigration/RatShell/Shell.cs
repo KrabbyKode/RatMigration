@@ -55,6 +55,7 @@ namespace RatMigration.RatShell
 			_ = new Commands.Shutdown();
             _ = new Commands.Time();
             _ = new Commands.Network();
+            _ = new Commands.Display();
 
             // Log for debugging
             Console.ForegroundColor = ConsoleColor.Green;

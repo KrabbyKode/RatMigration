@@ -71,3 +71,9 @@ case "user":
 default:
 	Response += "Unexpected argument: " + Args[0];
 	break;
+
+display[arg0]
+display help
+display 1
+display 2
+display 3

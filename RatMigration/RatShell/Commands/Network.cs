@@ -12,7 +12,7 @@ using Cosmos.System.Network.IPv4.UDP.DHCP;
 
 namespace RatMigration.RatShell.Commands
 {
-    internal class Network : Command
+    public class Network : Command
     {
         public Network()
         {
