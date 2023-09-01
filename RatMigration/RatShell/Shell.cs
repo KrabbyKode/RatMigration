@@ -51,11 +51,12 @@ namespace RatMigration.RatShell
 			_ = new Commands.File();
 			_ = new Commands.Help();
 			_ = new Commands.Info();
-			_ = new Commands.Reboot();
-			_ = new Commands.Shutdown();
             _ = new Commands.Time();
             _ = new Commands.Network();
             _ = new Commands.Display();
+            //_ = new Commands.Dictionary();
+            _ = new Commands.System();
+
 
             // Log for debugging
             Console.ForegroundColor = ConsoleColor.Green;

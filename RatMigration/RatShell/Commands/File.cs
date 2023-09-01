@@ -16,9 +16,15 @@ namespace RatMigration.RatShell.Commands
 		public override string Invoke(string[] Args)
 		{
 			string Response = "";
-			try
+			/*
+            Boolean read_only = false;
+            Boolean archived = false;
+            Boolean system = false;
+            Boolean hidden = false;
+			*/
+            try
 			{
-				switch (Args[0]) //if our first arguament [0] is "create", then we run the next code
+				switch (Args[0]) //if our first arguament [0] is something like touch or rm, then do the following:
 				{
 					case "touch": // Creates a file with the specified name.
 						VFSManager.CreateFile(Args[1]); //this method was also used to register the vfs. You could use this to automaticly make files. args[1] is for the name the user makes
@@ -93,11 +99,16 @@ namespace RatMigration.RatShell.Commands
 						}
 						break;
 
+					//case "+r":
+						//Boolean read_only = true;
+						//break;
+
 					default:
 						Response += "Unexpected argument: " + Args[0]; //if you give a bullshit argument, it will tell you that it's an error and shame you with what you typed.
 						break;
 
 				}
+
 			}
 			catch (Exception E)
 			{

@@ -1,6 +1,7 @@
 ﻿Credits:
 xyve#5469
 Tech Media
+Terminal.cs#4512
 
 private static int screenX = 800;
 private static int screenY = 640;  <- lets see if we can use screenX&Y to print out in the sysinfo command
@@ -77,3 +78,86 @@ display help
 display 1
 display 2
 display 3
+
+https://home.csulb.edu/~murdock/attrib.html#
+
+R.A.S.H
+Read-only, Archive, System, Hidden
+attrib +r or attrib -r (so on and so forth)
+view current attributes: attrib *.*
+
+Commands.PasswordSystem.Password
+
+            /*
+            Console.WriteLine("Enter a name and age separated by a comma (e.g. John, 25):");
+            while (true)
+            {
+                string input = Console.ReadLine();
+                if (input == "exit")
+                {
+                    break;
+                }
+
+                string[] inputArray = input.Split(',');
+                string name = inputArray[0].Trim();
+                int age = int.Parse(inputArray[1].Trim());
+
+                inputDictionary.Add(name, age);
+
+                if (input == "exit")
+                {
+                    Console.WriteLine("The dictionary contains the following items:");
+                    foreach (KeyValuePair<string, int> item in inputDictionary)
+                    {
+                        Console.WriteLine(item.Key + ": " + item.Value);
+                    }
+                }
+                    
+            }
+            */
+
+using System;
+using Cosmos.System.FileSystem;
+using Cosmos.System.FileSystem.VFS;
+
+namespace MyTextEditor
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to MyTextEditor");
+            Console.WriteLine("Enter the name of the file to be edited:");
+            string filename = Console.ReadLine();
+
+            // Open the file for reading and writing
+            var file = new FileStream(filename, FileMode.OpenOrCreate);
+
+            Console.WriteLine("Enter text to be added to the file:");
+            string input = Console.ReadLine();
+
+            // Write the input text to the file
+            file.Write(System.Text.Encoding.UTF8.GetBytes(input), 0, input.Length);
+
+            Console.WriteLine("Text has been added to the file");
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
+        }
+    }
+}
+In this example, the Main method of the Program class is used to create a basic text editor. The program first prompts the user to enter the name of the file to be edited. It then uses the FileStream class to open the file for reading and writing. The user is prompted to enter the text to be added to the file, which is then written to the file using the Write method of the FileStream class.
+
+This is just a basic example of how you can create a text editor in Cosmos OS. Depending on your requirements, you may need to add additional functionality such as the ability to read existing text from the file, move the cursor, delete text, etc.
+
+foreach (KeyValuePair<string, string> item in dictionary)
+            {
+                Console.WriteLine("Key: {0}, Value: {1}", item.Key, item.Value);
+            }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Current User(s):");
+                Console.ResetColor();
+
+Things to add:
+Show all folders and files
+Tell the user if they got the username or password incorrect, instead of a generic message. DONE
+make command and arguments for shutting down/ restarting. maybe "sys shutdown" DONE
