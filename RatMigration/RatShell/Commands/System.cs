@@ -23,19 +23,28 @@ namespace RatMigration.RatShell.Commands
                 {
                     case "shutdown":
                     case "reboot":
+                        // Display a message asking the user if they want to shutdown or reboot Rat OS.
                         Console.WriteLine($"Would you like to {(Args[0] == "shutdown" ? "Shutdown" : "reboot")} Rat OS? [Y]es/[N]o");
+
+                        // Read the user's response and convert it to lowercase for case-insensitive comparison.
                         string answer = Console.ReadLine().ToLower();
+
+                        // Check if the user's response is "y" or "yes" to confirm the action.
                         if (answer == "y" || answer == "yes")
                         {
+                            // Depending on the command (shutdown or reboot), perform the corresponding action.
                             if (Args[0] == "shutdown")
                             {
+                                // Shutdown Rat OS
                                 Cosmos.System.Power.Shutdown();
                             }
                             else if (Args[0] == "reboot")
                             {
+                                // Reboot Rat OS
                                 Cosmos.System.Power.Reboot();
                             }
                         }
+
                         // We can just assume it was aborted as the code will not go past the power function.
                         return $"{(Args[0] == "shutdown" ? "Shutdown" : "Restart")} Aborted.";
 

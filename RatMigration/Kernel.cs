@@ -9,9 +9,9 @@ namespace RatMigration
 {
 	public class Kernel : Sys.Kernel
 	{
-        private string copiedText = "";
-        public string user = "user";
-		public string hostName = "rat_os";
+        private string copiedText = ""; //some code fragment, i forgot what it does. Im not gonna delete it in case i need it.
+        public string user = "user"; //need to change this, since there are three pre-built user accounts. 
+		public string hostName = "rat_os"; //obviously
 
 		protected override void BeforeRun()
 		{

@@ -12,7 +12,7 @@ namespace RatMigration.RatShell.Commands
 
 		public override string Invoke(string[] Args)
 		{
-			Console.Clear();
+			Console.Clear(); //BE GONE, BITCH ASS SPAM!!!
 			return string.Empty;
 		}
 	}

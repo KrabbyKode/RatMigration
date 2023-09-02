@@ -16,7 +16,7 @@ namespace RatMigration.RatShell.Commands
 		public override string Invoke(string[] Args)
 		{
 			string Response = "";
-			/*
+			/* random shit that dont work right now
             Boolean read_only = false;
             Boolean archived = false;
             Boolean system = false;
@@ -110,11 +110,15 @@ namespace RatMigration.RatShell.Commands
 				}
 
 			}
-			catch (Exception E)
-			{
-				return E.Message;
-			}
-			return Response;
-		}
-	}
+            catch (Exception E)
+            {
+                // If an exception is caught during execution, return the error message.
+                return E.Message;
+            }
+
+            // If no exception occurred, return the 'Response' value.
+            return Response;
+
+        }
+    }
 }
